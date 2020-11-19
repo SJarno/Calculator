@@ -10,15 +10,15 @@ function plus() {
     setResult(getNumber("a") + getNumber("b"))
 }
 
-function kerto() {
+function multiply() {
     setResult(getNumber("a") * getNumber("b"))
 }
 
-function miinus() {
+function minus() {
     setResult(getNumber("a") - getNumber("b"));
 }
  
-function jako() {
+function divide() {
     setResult(getNumber("a") / getNumber("b"));
 }
 
