@@ -1,62 +1,11 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html>
-    <head>
-
-    </head>
-
-    <body>
-      <h1>Testi</h1>
-      <p>Laskinta tänne</p>
-      <p>Tuleeko GitHubin kautta?</p>
-      <p>Java 11 toimii</p>
-
-
-        <h1>Plus- ja Kertolaskin</h1>
-        
-
-        <section>
-            <p>
-                Basic calulations: <br />
-                <input type="text" id="a" value="0" />
-                <input type="text" id="b" value="0" />
-            </p>
-
-            <p>
-                <input type="button" value="+" onclick="plus()" />
-                <input type="button" value="-" onclick="minus()" />
-                <input type="button" value="*" onclick="multiply()" />
-                <input type="button" value="/" onclick="divide()" />
-                <input type="button" value="^" onclick="exponent()" />
-            </p>
-            
-            <p>
-                Trigonometric functions: <br />
-                <input type="text" id="c" value="0" />
-            </p>
-            
-            <p>
-                RAD: 
-                <input type="button" value="sin" onclick="sin()" />
-                <input type="button" value="cos" onclick="cos()" />
-                <input type="button" value="tan" onclick="tan()" />
-            </p>
-            
-            
-
-
-            <p>Result: <span id="result"></span></p>
-        </section>
-
-        <script src="javascript/calculator.js"></script>
-    </body>
-=======
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <title>Calculator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
 </head>
+
 <body>
   <div class="container">
     <div class="row">
@@ -64,12 +13,41 @@
       </div>
       <div class="col">
         <h1>Calculator</h1>
+          <section>
+            <p>
+                Basic calulations: <br />
+                <input type="text" id="a" value="0" />
+                <input type="text" id="b" value="0" />
+            </p>
+            <p>
+                <input type="button" value="+" onclick="plus()" />
+                <input type="button" value="-" onclick="minus()" />
+                <input type="button" value="*" onclick="multiply()" />
+                <input type="button" value="/" onclick="divide()" />
+<<<<<<< HEAD
+                <input type="button" value="^" onclick="exponent()" />
+            </p>
+            
+=======
+            </p>       
+>>>>>>> c289aec20bab4c2936b43b56c0eed2c8e42e5e8d
+            <p>
+                Trigonometric functions: <br />
+                <input type="text" id="c" value="0" />
+            </p>          
+            <p>
+                RAD: 
+                <input type="button" value="sin" onclick="sin()" />
+                <input type="button" value="cos" onclick="cos()" />
+                <input type="button" value="tan" onclick="tan()" />
+            </p>
+            <p>Result: <span id="result"></span></p>
+        </section>
       </div>
       <div class="col">
       </div>
     </div>
   </div>
-  
+  <script src="javascript/calculator.js"></script>
 </body>
->>>>>>> 50d3fe6574ea922c43b7f83b85537ee5e8b00b86
 </html>
