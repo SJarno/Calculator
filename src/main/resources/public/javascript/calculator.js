@@ -22,6 +22,10 @@ function divide() {
     setResult(getNumber("a") / getNumber("b"));
 }
 
+function exponent() {
+    setResult(Math.pow(getNumber("a"), getNumber("b")));
+}
+
 function sin() {
     setResult(Math.sin(getNumber("c")));
 }
