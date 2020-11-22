@@ -2,12 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
 </body>
+  <!-- 1st calclulator-->
   <section th:fragment="calculatorFragment">
-    <p>
-      Basic calulations: <br />
-      <input type="text" id="a" value="0" /><br>
-      <input type="text" id="b" value="0" />
-    </p>
+    <div class="input-group">
+      <p>
+        Basic calulations: <br />
+        <input class="w-50" type="text" id="a" value="0" /><br>
+        <input class="w-50" type="text" id="b" value="0" />     
+      </p>
+    </div>
     <p>
       <input type="button" class="btn btn-outline-secondary" value="+" onclick="plus()" />
       <input type="button" class="btn btn-outline-secondary" value="-" onclick="minus()" />
@@ -16,7 +19,7 @@
     </p>       
      <p>
       Trigonometric functions: <br />
-      <input type="text" id="c" value="0" />
+      <input class="w-50" type="text" id="c" value="0" />
     </p>          
     <p>
       RAD: 
@@ -26,4 +29,7 @@
     </p>
     <p>Result: <span id="result"></span></p>
   </section> 
+  <!-- 2nd Calculator-->
+  <section th:fragment="secondCalcFragment">
+  </section>
 </html>
