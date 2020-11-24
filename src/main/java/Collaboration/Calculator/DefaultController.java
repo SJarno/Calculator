@@ -11,4 +11,9 @@ public class DefaultController {
         return "index";
     }
     
+    @GetMapping("/model")
+    public String fromModel() {
+        return "from_model";
+    }
+    
 }

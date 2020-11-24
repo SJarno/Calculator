@@ -6,43 +6,42 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
 </head>
 <body>
-  <div class="container">
-  <!-- Note: 1st row header -->
-    <header>
-      <div class="row border-bottom">
-        <div class="col-2">
+    <div class="container">
+    <!-- Note: 1st row header -->
+        <header>
+          <div class="row border-bottom">
+            <div class="col-2">
+            </div>
+            <div class="col">
+              <h1>Collaboration project, Calculator</h1>
+            </div>
+            <div class="col-2">
+            </div>
+          </div>
+        </header>
+        <br>
+        <!-- Note 2nd row contains calculator -->
+        <div class="row align-self-center">
+            <div class="col-1"></div>
+
+            <div class="col-4 border">
+                <h2>Calculus</h2>
+                <!-- Note: the calculator is in a fragment-->
+                <section th:replace="fragments/calculator :: calculatorFragment">
+                </section>
+            </div>
+            <div class="col-1"></div>
+
+            <!-- Another calculator for tests-->
+            <div class="col-4 border">
+                <h2 class="text-center">Calculator#2</h2>
+                <section th:replace="fragments/calculator :: secondCalcFragment">
+                </section>
+            </div>
         </div>
-        <div class="col">
-          <h1>Collaboration project, Calculator</h1>
-        </div>
-        <div class="col-2">
-        </div>
-      </div>
-    </header>
-    <br>
-    <!-- Note 2nd row contains calculator -->
-    <div class="row align-self-center">
-      <div class="col-1">
-      </div>
+        
       
-      <div class="col-4 border">
-        <h2>Calculus</h2>
-        <!-- Note: the calculator is in a fragment-->
-          <section th:replace="fragments/calculator :: calculatorFragment">
-          </section>
-      </div>
-      <div class="col-1">
-      </div>
-      <!-- Another calculator for tests-->
-      <div class="col-4 border">
-        <h2 class="text-center">Calculator#2</h2>
-        <section th:replace="fragments/calculator :: secondCalcFragment">
-        </senction>
-      </div>
-      <div class="col-1">
-      </div>
     </div>
-  </div>
-  <script src="javascript/calculator.js"></script>
+    <script src="javascript/calculator.js"></script>
 </body>
 </html>
