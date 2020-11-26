@@ -1,4 +1,5 @@
 class Calculator {
+    
     constructor(previousOperandTextElement, currentOperandTextElement) {
         this.previousOperandTextElement = previousOperandTextElement;
         this.currentOperandTextElement = currentOperandTextElement;
@@ -46,7 +47,7 @@ class Calculator {
             case '*': 
                 computation  = prev * current
                 break
-            case '+': 
+            case '÷': 
                 computation  = prev / current
                 break
             default: 
@@ -128,3 +129,35 @@ deleteButton.addEventListener('click', button => {
     calculator.delete();
     calculator.updateDisplay();
 })
+
+
+document.addEventListener('keydown', function(event) {
+    console.log(event.key);
+
+    if (parseFloat(event.key) !== isNaN || event.key === '.' || event.key === ',') {
+        calculator.appendNumber(event.key);
+        calculator.updateDisplay();
+    }
+
+    if (event.key === '+' || event.key === '-' || event.key === '*' || event.key === '/') {
+        calculator.chooseOperation(event.key);
+        calculator.updateDisplay();
+    }
+
+    if (event.key === 'Enter') {
+        calculator.compute();
+        calculator.updateDisplay();
+    }
+
+    if (event.key === 'Escape') {
+        calculator.clear();
+        calculator.updateDisplay();
+    }
+
+    if (event.key === 'Backspace') {
+        calculator.delete();
+        calculator.updateDisplay();
+    }
+
+
+});

@@ -1,5 +1,5 @@
 *, *::before, *::after {
-    boz-sizing: border-box;
+    box-sizing: border-box;
     font-family: sans-serif;
     font-weight: normal;
 }
