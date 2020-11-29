@@ -13,7 +13,9 @@ class Calculator {
     }
     
     delete() {
+        console.log("Delete method accessed")
         this.currentOperand = this.currentOperand.toString().slice(0, -1)
+        console.log(this.currentOperand.toString());
     }
     
     appendNumber(number) {
@@ -49,6 +51,9 @@ class Calculator {
                 break
             case '÷': 
                 computation  = prev / current
+                break
+            case '/':
+                computation = prev / current
                 break
             default: 
                 return
@@ -134,22 +139,28 @@ deleteButton.addEventListener('click', button => {
 document.addEventListener('keydown', function(event) {
     console.log(event.key);
 
-    if (parseFloat(event.key) !== isNaN || event.key === '.' || event.key === ',') {
+    // parseFloat(event.key) !== isNaN
+
+    if ( (event.key >= 0 && event.key <= 9) || event.key === '.' || event.key === ',') {
+        console.log("if-statement for numbers is run");
         calculator.appendNumber(event.key);
         calculator.updateDisplay();
     }
 
     if (event.key === '+' || event.key === '-' || event.key === '*' || event.key === '/') {
+        console.log("if-statement for operations is run");
         calculator.chooseOperation(event.key);
         calculator.updateDisplay();
     }
 
     if (event.key === 'Enter') {
+        console.log("if-statement for Enter is run");
         calculator.compute();
         calculator.updateDisplay();
     }
 
     if (event.key === 'Escape') {
+        console.log("if-statement for Escape is run");
         calculator.clear();
         calculator.updateDisplay();
     }
